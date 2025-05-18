@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>detodounpoco</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+      padding: 40px;
+      margin: 0;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      color: #0b3d91;
+      letter-spacing: 1px;
+    }
+
+    .search-box {
+      max-width: 520px;
+      margin: 0 auto 30px auto;
+      display: flex;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 14px 18px;
+      font-size: 1.1em;
+      border: none;
+      outline: none;
+    }
+
+    .search-box button {
+      padding: 14px 24px;
+      font-size: 1.1em;
+      border: none;
+      background-color: #0b3d91;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-box button:hover {
+      background-color: #064080;
+    }
+
+    .results {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 30px 25px;
+      display: none;
+    }
+
+    .result-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .result-item h2 {
+      color: #0b3d91;
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.8em;
+    }
+
+    .result-item a {
+      text-decoration: none;
+      color: #1446a0;
+      font-weight: 600;
+      font-size: 1.1em;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .result-item a:hover {
+      border-color: #0b3d91;
+    }
+
+    .result-item p {
+      font-style: italic;
+      color: #555;
+      font-size: 1em;
+      margin: 0;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>detodounpoco</h1>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Buscar..." />
+    <button onclick="search()">Buscar</button>
+  </div>
+
+  <div class="results" id="resultsBox">
+    <div class="result-item">
+      <h2>Latino aquí</h2>
+      <a href="https://www.mediafire.com/file/d6hwbm6urg20fe8/latino_fifa_23.rar/file" target="_blank" rel="noopener noreferrer">
+        Descargar comentarios de Fernando Palomo y Mario Alberto Kempes
+      </a>
+      <p>Contraseña: dana</p>
+    </div>
+  </div>
+
+  <script>
+    function search() {
+      const input = document.getElementById('searchInput').value.toLowerCase().trim();
+      const results = document.getElementById('resultsBox');
+
+      if (input.includes("comentarios") || input.includes("latino")) {
+        results.style.display = "flex";
+      } else {
+        results.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
